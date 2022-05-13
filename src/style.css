@@ -1,0 +1,86 @@
+body {
+  margin: 10px;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  display: inline-block;
+  padding: 10px 10px 0 0;
+  text-transform: capitalize;
+}
+h2,
+h3 {
+  display: inline-block;
+  font-size: 14px;
+  padding: 20px 0 10px 0;
+}
+img {
+  height: 80px;
+  padding: 0 15px 0 0;
+}
+i.UV-indicator {
+  color: rgb(11, 94, 215);
+}
+i.UV-indicator-high {
+  color: crimson;
+}
+i.UV-indicator-low {
+  color: #2e8b57;
+}
+i.UV-indicator-moderate {
+  color: #ffd700;
+}
+i.UV-indicator-high {
+  color: crimson;
+}
+.outline {
+  position: fixed;
+  padding: 20px;
+  max-width: 600px;
+}
+.temperature {
+  font-weight: 900;
+}
+.current-temp {
+  font-size: 50px;
+  vertical-align: bottom;
+}
+.large {
+  font-size: 20px;
+  position: relative;
+}
+.temp-link {
+  text-decoration: none;
+  color: grey;
+}
+.temp-selected {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+}
+.daily {
+  font-weight: 900;
+}
+.current {
+  padding: 10px 0 0 0;
+}
+.today {
+  font-weight: 900;
+}
+
+.side {
+  font-size: 14px;
+}
+.bold {
+  font-weight: 700;
+}
+.description {
+  padding: 0 0 0 10px;
+  font-weight: 900;
+  font-size: 16px;
+}
+.day {
+  padding: 10px 0 0 0;
+  font-weight: 500;
+  color: rgb(11, 94, 215);
+}

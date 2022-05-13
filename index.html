@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 5 Homework</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2afb9ed4f5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid outline">
+      <form>
+        <div class="row">
+          <div class="col-6">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Enter city name"
+              autocomplete="off"
+              autofocus="on"
+              id="text-city-search"
+            />
+          </div>
+
+          <div class="col-2">
+            <input
+              type="submit"
+              class="btn btn-primary"
+              value="Search"
+              id="submit-city-search"
+            />
+          </div>
+          <div class="col-2">
+            <input
+              type="submit"
+              class="btn btn-secondary"
+              value="Current location"
+              id="submit-current-location"
+            />
+          </div>
+        </div>
+      </form>
+      <!--city day and date-->
+      <h1></h1>
+      <h2></h2>
+      <h3></h3>
+      <!--start of table-->
+
+      <div class="row top-row">
+        <!--left side of table-->
+        <!--today large icon and temp-->
+        <div class="col">
+          <img src="images/iconSun.jpeg" />
+          <span class="current-temp" id="temp-now">00</span>
+          <span class="unit large">
+            <a href="#" class="temp-link" id="temp-celsius">°C</a> |
+            <a href="#" class="temp-link" id="temp-fahrenheit">°F</a>
+          </span>
+          <!--today min and max-->
+
+          <div class="current">
+            <span class="today current-min" id="current-temp-min">000</span
+            ><span class="unit daily">°C</span> min
+
+            <span class="today current-max" id="current-temp-max"> 000</span
+            ><span class="unit daily">°C</span> max
+            <!--description-->
+            <span class="description" id="description"> </span>
+          </div>
+        </div>
+        <!--right side of table-->
+
+        <div class="col side">
+          <div class="row">
+            <div class="col-sm-1 bold">&nbsp</div>
+          </div>
+          <!--amount of precipitation-->
+          <div class="row">
+            <div class="col-sm-1 bold precipitation-amount" id="rain"></div>
+
+            <div class="col">rain (ml)</div>
+          </div>
+          <!--UV-->
+          <div class="row">
+            <div class="col-sm-3 bold">
+              <i class="fa-solid fa-circle" id="uvIndicator"></i>
+              <span class="UV-number" id="uvNumber"></span>
+            </div>
+            <div class="col">UV</div>
+          </div>
+          <!--wind-->
+          <div class="row">
+            <div class="col-sm-1 bold wind-speed" id="wind"></div>
+            <div class="col">wind</div>
+          </div>
+        </div>
+      </div>
+
+      <!--daily weather-->
+
+      <div class="row text-center">
+        <!--daily weather day 1-->
+        <div class="col">
+          <div class="day">Thursday</div>
+          <div class="day-one-icon"><i class="fa-solid fa-cloud"></i></div>
+          <div class="day-one-temp temperature">28°C</div>
+        </div>
+        <!--daily weather day 2-->
+        <div class="col">
+          <div class="day">Friday</div>
+          <div class="day-two-icon"><i class="fa-solid fa-sun"></i></div>
+          <div class="day-two-temp temperature">28°C</div>
+        </div>
+
+        <!--daily weather day 3-->
+        <div class="col">
+          <div class="day">Saturday</div>
+          <div class="day-three-icon"><i class="fa-solid fa-sun"></i></div>
+          <div class="day-three-temp temperature">28°C</div>
+        </div>
+        <!--daily weather day 4-->
+        <div class="col">
+          <div class="day">Sunday</div>
+          <div class="day-four-icon"><i class="fa-solid fa-sun"></i></div>
+          <div class="day-four-temp temperature">28°C</div>
+        </div>
+        <!--daily weather day 5-->
+        <div class="col">
+          <div class="day">Monday</div>
+          <div class="day-five-icon"><i class="fa-solid fa-sun"></i></div>
+          <div class="day-five-temp temperature">28°C</div>
+        </div>
+        <!--daily weather day 6-->
+        <div class="col">
+          <div class="day">Friday</div>
+          <div class="day-six-icon"><i class="fa-solid fa-sun"></i></div>
+          <div class="day-six-temp temperature">28°C</div>
+        </div>
+      </div>
+      <!--end of daily table-->
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
