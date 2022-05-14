@@ -84,3 +84,9 @@ i.UV-indicator-high {
   font-weight: 500;
   color: rgb(11, 94, 215);
 }
+.end {
+  padding: 10px;
+  text-decoration: none;
+  color: rgb(11, 94, 215);
+  vertical-align: bottom;
+}
