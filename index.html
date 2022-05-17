@@ -54,34 +54,33 @@
       <!--city day and date-->
       <h1></h1>
       <h2></h2>
-      <h3></h3>
 
       <!--start of table-->
 
-      <div class="row top-row border">
+      <div class="row">
         <!--left side of table-->
         <!--today large icon and temp-->
-        <div class="col border">
+        <div class="col">
           <img src="images/iconSun.jpeg" />
-          <span class="current-temp border" id="temp-now"></span>
-          <span class="large border">
+          <span class="current-temp" id="temp-now"></span>
+          <span class="large">
             <a href="#" class="temp-link" id="temp-celsius">°C</a> |
             <a href="#" class="temp-link" id="temp-fahrenheit">°F</a>
           </span>
         </div>
         <!--right side of table-->
 
-        <div class="col side border">
+        <div class="col side">
           <!--rain-->
-          <div class="row border">
-            <div class="col-2 bold right border" id="rain"></div>
+          <div class="row">
+            <div class="col-2 bold right" id="rain"></div>
             <div class="col right">rain (ml)</div>
           </div>
           <!--UV-->
-          <div class="row border">
-            <div class="col-2 bold right border">
-              <i class="fa-solid fa-circle border" id="uvIndicator"></i>
-              <span class="UV-number right border" id="uvNumber"></span>
+          <div class="row">
+            <div class="col-2 bold right">
+              <i class="fa-solid fa-circle" id="uvIndicator"></i>
+              <span class="UV-number right" id="uvNumber"></span>
             </div>
             <div class="col right">UV</div>
           </div>
@@ -92,13 +91,12 @@
           </div>
         </div>
         <!--today min and max-->
+        <div class="current">
+          <span class="today" id="current-temp-min"></span
+          ><span class="today">°C</span> min
 
-        <div class="current border">
-          <span class="today current-min" id="current-temp-min">000</span
-          ><span class="unit daily">°C</span> min
-
-          <span class="today current-max" id="current-temp-max"> 000</span
-          ><span class="unit daily">°C</span> max
+          <span class="today" id="current-temp-max"></span
+          ><span class="today">°C</span> max
           <!--description-->
           <span class="description" id="description"> </span>
         </div>
@@ -144,21 +142,22 @@
           <div class="day-six-icon"><i class="fa-solid fa-sun"></i></div>
           <div class="day-six-temp temperature">28°C</div>
         </div>
-        <div></div>
-        <div>
+
+        <div class="end">
           <a
             href="https://github.com/rappcw/weather-app"
             target="_blank"
             alt="GitHub link"
-            class="end"
+            class="temp-link"
           >
             Source code on GitHub
           </a>
+          |
           <a
             href="https://www.linkedin.com/in/charmaine-rapp-a59a8472/"
             target="_blank"
             alt="LinkedIn profile"
-            class="end"
+            class="temp-link"
             >Coded by Charmaine Rapp</a
           >
         </div>

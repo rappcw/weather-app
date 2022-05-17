@@ -8,11 +8,9 @@ h1 {
   padding: 10px 10px 0 0;
   text-transform: capitalize;
 }
-h2,
-h3 {
+h2 {
   display: inline-block;
   font-size: 14px;
-  padding: 20px 0 10px 0;
 }
 img {
   height: 80px;
@@ -51,51 +49,55 @@ i.UV-indicator-moderate {
   position: relative;
   top: -14px;
 }
+/* style of large C and F* as well as end links*/
 .temp-link {
   text-decoration: none;
   color: grey;
 }
+/* style of large C and F* awhen selected*/
 .temp-selected {
   text-decoration: none;
   color: black;
   font-weight: 900;
 }
-.daily {
-  font-weight: 900;
-}
+/* padding on current min and max row*/
 .current {
-  padding: 10px 0 0 0;
+  padding: 12px 0 0 0;
 }
+/* style on current min and max temperatures*/
 .today {
   font-weight: 900;
 }
-
+/* font size for right-side table*/
 .side {
   font-size: 15px;
 }
+/* font weight and align for value column in right table*/
 .bold {
   font-weight: 700;
   text-align: center;
 }
+/* padding on columns in right table*/
 .right {
   padding: 0;
 }
+/* style for description*/
 .description {
   padding: 0 0 0 10px;
   font-weight: 900;
   font-size: 16px;
 }
+/* style for each day forcast day name*/
 .day {
   padding: 10px 0 0 0;
   font-weight: 500;
   color: rgb(11, 94, 215);
 }
+/* padding for end row*/
 .end {
   padding: 10px;
-  text-decoration: none;
-  color: rgb(11, 94, 215);
-  vertical-align: bottom;
 }
+/* search button*/
 .btn {
   background-color: dodgerblue; /* Blue background */
   border: none; /* Remove borders */
@@ -111,6 +113,7 @@ i.UV-indicator-moderate {
   background-color: rgb(11, 94, 215);
   color: white; /* White text */
 }
+/* current location button*/
 .btn2 {
   background-color: rgb(94, 95, 95); /* grey background */
   border: none; /* Remove borders */
