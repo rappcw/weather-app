@@ -30,24 +30,26 @@ i.UV-indicator-low {
 i.UV-indicator-moderate {
   color: #ffd700;
 }
-i.UV-indicator-high {
-  color: crimson;
-}
+/* container of whole page */
 .outline {
   position: fixed;
   padding: 20px;
   max-width: 600px;
 }
+/* daily temperatures for forecast */
 .temperature {
   font-weight: 900;
 }
+/* current temperature */
 .current-temp {
-  font-size: 50px;
+  font-size: 52px;
   vertical-align: bottom;
 }
+/* size and position of large C and F*/
 .large {
   font-size: 20px;
   position: relative;
+  top: -14px;
 }
 .temp-link {
   text-decoration: none;
@@ -69,10 +71,14 @@ i.UV-indicator-high {
 }
 
 .side {
-  font-size: 14px;
+  font-size: 15px;
 }
 .bold {
   font-weight: 700;
+  text-align: center;
+}
+.right {
+  padding: 0;
 }
 .description {
   padding: 0 0 0 10px;
@@ -89,4 +95,34 @@ i.UV-indicator-high {
   text-decoration: none;
   color: rgb(11, 94, 215);
   vertical-align: bottom;
+}
+.btn {
+  background-color: dodgerblue; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 2px 6px; /* Some padding */
+  font-size: 24px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  border-radius: 10px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgb(11, 94, 215);
+  color: white; /* White text */
+}
+.btn2 {
+  background-color: rgb(94, 95, 95); /* grey background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 2px 6px; /* Some padding */
+  font-size: 24px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  border-radius: 10px;
+}
+
+/* Darker background on mouse-over */
+.btn2:hover {
+  background-color: rgb(50, 51, 53);
+  color: white; /* White text */
 }

@@ -69,11 +69,17 @@ function showWeather(response) {
 function showWeather2(response) {
   console.log(response);
 
-  document.querySelector("#rain").innerHTML = Math.round(
-    response.data.daily[0].rain
-  );
+  let rain = response.data.daily[0].rain;
+  if (rain !== undefined) {
+    rain = document.querySelector("#rain").innerHTML = Math.round(
+      response.data.daily[0].rain
+    );
+  } else if (rain === undefined) {
+    rain = document.querySelector("#rain").innerHTML = 0;
+  }
+  console.log(rain);
   let uvIndicator = Math.round(response.data.current.uvi);
-  console.log(response.data.current.uvi);
+
   document.querySelector("#uvNumber").innerHTML = uvIndicator;
   let uvIcon = document.querySelector("#uvIndicator");
   if (uvIndicator < 2) {

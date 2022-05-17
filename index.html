@@ -29,7 +29,7 @@
     <div class="container-fluid outline">
       <form>
         <div class="row">
-          <div class="col-6">
+          <div class="col-8">
             <input
               type="search"
               class="form-control"
@@ -39,22 +39,15 @@
               id="text-city-search"
             />
           </div>
-
-          <div class="col-2">
-            <input
-              type="submit"
-              class="btn btn-primary"
-              value="Search"
-              id="submit-city-search"
-            />
+          <div class="col-1">
+            <button class="btn" id="submit-city-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
-          <div class="col-2">
-            <input
-              type="submit"
-              class="btn btn-secondary"
-              value="Current location"
-              id="submit-current-location"
-            />
+          <div class="col-1">
+            <button class="btn2" id="submit-current-location">
+              <i class="fa-solid fa-magnifying-glass-location"></i>
+            </button>
           </div>
         </div>
       </form>
@@ -65,53 +58,49 @@
 
       <!--start of table-->
 
-      <div class="row top-row">
+      <div class="row top-row border">
         <!--left side of table-->
         <!--today large icon and temp-->
-        <div class="col">
+        <div class="col border">
           <img src="images/iconSun.jpeg" />
-          <span class="current-temp" id="temp-now">00</span>
-          <span class="unit large">
+          <span class="current-temp border" id="temp-now"></span>
+          <span class="large border">
             <a href="#" class="temp-link" id="temp-celsius">°C</a> |
             <a href="#" class="temp-link" id="temp-fahrenheit">°F</a>
           </span>
-          <!--today min and max-->
-
-          <div class="current">
-            <span class="today current-min" id="current-temp-min">000</span
-            ><span class="unit daily">°C</span> min
-
-            <span class="today current-max" id="current-temp-max"> 000</span
-            ><span class="unit daily">°C</span> max
-            <!--description-->
-            <span class="description" id="description"> </span>
-          </div>
         </div>
         <!--right side of table-->
 
-        <div class="col side">
-          <div class="row">
-            <div class="col-sm-1 bold">&nbsp</div>
-          </div>
-          <!--amount of precipitation-->
-          <div class="row">
-            <div class="col-sm-1 bold precipitation-amount" id="rain"></div>
-
-            <div class="col">rain (ml)</div>
+        <div class="col side border">
+          <!--rain-->
+          <div class="row border">
+            <div class="col-2 bold right border" id="rain"></div>
+            <div class="col right">rain (ml)</div>
           </div>
           <!--UV-->
-          <div class="row">
-            <div class="col-sm-3 bold">
-              <i class="fa-solid fa-circle" id="uvIndicator"></i>
-              <span class="UV-number" id="uvNumber"></span>
+          <div class="row border">
+            <div class="col-2 bold right border">
+              <i class="fa-solid fa-circle border" id="uvIndicator"></i>
+              <span class="UV-number right border" id="uvNumber"></span>
             </div>
-            <div class="col">UV</div>
+            <div class="col right">UV</div>
           </div>
           <!--wind-->
           <div class="row">
-            <div class="col-sm-1 bold wind-speed" id="wind"></div>
-            <div class="col">wind</div>
+            <div class="col-2 bold right" id="wind"></div>
+            <div class="col right">wind</div>
           </div>
+        </div>
+        <!--today min and max-->
+
+        <div class="current border">
+          <span class="today current-min" id="current-temp-min">000</span
+          ><span class="unit daily">°C</span> min
+
+          <span class="today current-max" id="current-temp-max"> 000</span
+          ><span class="unit daily">°C</span> max
+          <!--description-->
+          <span class="description" id="description"> </span>
         </div>
       </div>
 
