@@ -28,16 +28,18 @@ i.UV-indicator-low {
 i.UV-indicator-moderate {
   color: #ffd700;
 }
-/* container of whole page */
-.outline {
-  position: fixed;
-  padding: 20px;
+.app-wrapper {
+  position: absolute;
+  margin: 20px auto;
   max-width: 600px;
 }
-/* daily temperatures for forecast */
-.temperature {
-  font-weight: 900;
+/* container of whole page */
+.outline {
+  padding: 30px;
+  border: 1px solid rgb(205, 206, 206);
+  border-radius: 5px;
 }
+
 /* current temperature */
 .current-temp {
   font-size: 52px;
@@ -62,20 +64,16 @@ i.UV-indicator-moderate {
 }
 /* padding on current min and max row*/
 .current {
-  padding: 12px 0 0 0;
-}
-/* style on current min and max temperatures*/
-.today {
-  font-weight: 900;
+  padding: 12px 0 0 15px;
 }
 /* font size for right-side table*/
 .side {
   font-size: 15px;
 }
-/* font weight and align for value column in right table*/
+/* font bold and center*/
 .bold {
-  font-weight: 700;
-  text-align: left;
+  font-weight: 900;
+  text-align: center;
 }
 /* padding on columns in right table*/
 .right {
@@ -84,7 +82,6 @@ i.UV-indicator-moderate {
 /* style for description*/
 .description {
   padding: 0 0 0 10px;
-  font-weight: 900;
   font-size: 16px;
 }
 /* style for each day forcast day name*/
@@ -95,7 +92,8 @@ i.UV-indicator-moderate {
 }
 /* padding for end row*/
 .end {
-  padding: 10px;
+  padding: 10px 10px 0;
+  text-align: center;
 }
 /* search button*/
 .btn {

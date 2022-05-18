@@ -26,145 +26,145 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="container-fluid outline">
-      <form>
-        <div class="row">
-          <div class="col-8">
-            <input
-              type="search"
-              class="form-control"
-              placeholder="Enter city name"
-              autocomplete="off"
-              autofocus="on"
-              id="text-city-search"
-            />
-          </div>
-          <div class="col-1">
-            <button class="btn" id="submit-city-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
-          <div class="col-1">
-            <button class="btn2" id="submit-current-location">
-              <i class="fa-solid fa-magnifying-glass-location"></i>
-            </button>
-          </div>
-        </div>
-      </form>
-      <!--city day and date-->
-      <h1></h1>
-      <h2></h2>
-
-      <!--start of table-->
-
-      <div class="row">
-        <!--left side of table-->
-        <!--today large icon and temp-->
-        <div class="col">
-          <img src="images/iconSun.jpeg" />
-          <span class="current-temp" id="temp-now"></span>
-          <span class="large">
-            <a href="#" class="temp-link" id="temp-celsius">°C</a> |
-            <a href="#" class="temp-link" id="temp-fahrenheit">°F</a>
-          </span>
-        </div>
-        <!--right side of table-->
-
-        <div class="col side">
-          <!--rain-->
+    <div class="app-wrapper">
+      <div class="container-fluid outline">
+        <form>
           <div class="row">
-            <div class="col-2 bold right" id="rain"></div>
-            <div class="col right">rain (ml)</div>
-          </div>
-          <!--UV-->
-          <div class="row">
-            <div class="col-2 bold right">
-              <i class="fa-solid fa-circle" id="uvIndicator"></i>
-              <span class="UV-number right" id="uvNumber"></span>
+            <div class="col-8">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Enter city name"
+                autocomplete="off"
+                autofocus="on"
+                id="text-city-search"
+              />
             </div>
-            <div class="col right">UV</div>
+            <div class="col-1">
+              <button class="btn" id="submit-city-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <div class="col-1">
+              <button class="btn2" id="submit-current-location">
+                <i class="fa-solid fa-magnifying-glass-location"></i>
+              </button>
+            </div>
           </div>
-          <!--wind-->
-          <div class="row">
-            <div class="col-2 bold right" id="wind"></div>
-            <div class="col right">wind</div>
+        </form>
+        <!--city day and date-->
+        <h1></h1>
+        <h2></h2>
+
+        <!--start of table-->
+
+        <div class="row">
+          <!--left side of table-->
+          <!--today large icon and temp-->
+          <div class="col">
+            <img src="images/iconSun.jpeg" />
+            <span class="current-temp" id="temp-now"></span>
+            <span class="large">
+              <a href="#" class="temp-link" id="temp-celsius">°C</a> |
+              <a href="#" class="temp-link" id="temp-fahrenheit">°F</a>
+            </span>
+          </div>
+          <!--right side of table-->
+
+          <div class="col side">
+            <!--rain-->
+            <div class="row">
+              <div class="col-2 bold right" id="rain"></div>
+              <div class="col right">rain (ml)</div>
+            </div>
+            <!--UV-->
+            <div class="row">
+              <div class="col-2 right">
+                <i class="fa-solid fa-circle" id="uvIndicator"></i>
+                <span class="UV-number bold right" id="uvNumber"></span>
+              </div>
+              <div class="col right">UV</div>
+            </div>
+            <!--wind-->
+            <div class="row">
+              <div class="col-2 bold right" id="wind"></div>
+              <div class="col right">wind</div>
+            </div>
+          </div>
+          <!--today min and max-->
+          <div class="current">
+            <span class="bold" id="current-temp-min"></span
+            ><span class="bold">°C</span> min
+
+            <span class="bold" id="current-temp-max"></span
+            ><span class="bold">°C</span> max
+            <!--description-->
+            <span class="description bold" id="description"> </span>
           </div>
         </div>
-        <!--today min and max-->
-        <div class="current">
-          <span class="today" id="current-temp-min"></span
-          ><span class="today">°C</span> min
 
-          <span class="today" id="current-temp-max"></span
-          ><span class="today">°C</span> max
-          <!--description-->
-          <span class="description" id="description"> </span>
+        <!--daily weather-->
+
+        <div class="row text-center">
+          <!--daily weather day 1-->
+          <div class="col">
+            <div class="day">Thursday</div>
+            <div class="day-icon"><i class="fa-solid fa-cloud"></i></div>
+            <div class="bold">28°C</div>
+          </div>
+          <!--daily weather day 2-->
+          <div class="col">
+            <div class="day">Friday</div>
+            <div class="day-icon"><i class="fa-solid fa-sun"></i></div>
+            <div class="bold">28°C</div>
+          </div>
+
+          <!--daily weather day 3-->
+          <div class="col">
+            <div class="day">Saturday</div>
+            <div class="day-icon"><i class="fa-solid fa-sun"></i></div>
+            <div class="bold">28°C</div>
+          </div>
+          <!--daily weather day 4-->
+          <div class="col">
+            <div class="day">Sunday</div>
+            <div class="day-icon"><i class="fa-solid fa-sun"></i></div>
+            <div class="bold">28°C</div>
+          </div>
+          <!--daily weather day 5-->
+          <div class="col">
+            <div class="day">Monday</div>
+            <div class="day-icon"><i class="fa-solid fa-sun"></i></div>
+            <div class="bold">28°C</div>
+          </div>
+          <!--daily weather day 6-->
+          <div class="col">
+            <div class="day">Friday</div>
+            <div class="day-icon"><i class="fa-solid fa-sun"></i></div>
+            <div class="bold">28°C</div>
+          </div>
         </div>
+        <!--end of daily table-->
       </div>
-
-      <!--daily weather-->
-
-      <div class="row text-center">
-        <!--daily weather day 1-->
-        <div class="col">
-          <div class="day">Thursday</div>
-          <div class="day-one-icon"><i class="fa-solid fa-cloud"></i></div>
-          <div class="day-one-temp temperature">28°C</div>
-        </div>
-        <!--daily weather day 2-->
-        <div class="col">
-          <div class="day">Friday</div>
-          <div class="day-two-icon"><i class="fa-solid fa-sun"></i></div>
-          <div class="day-two-temp temperature">28°C</div>
-        </div>
-
-        <!--daily weather day 3-->
-        <div class="col">
-          <div class="day">Saturday</div>
-          <div class="day-three-icon"><i class="fa-solid fa-sun"></i></div>
-          <div class="day-three-temp temperature">28°C</div>
-        </div>
-        <!--daily weather day 4-->
-        <div class="col">
-          <div class="day">Sunday</div>
-          <div class="day-four-icon"><i class="fa-solid fa-sun"></i></div>
-          <div class="day-four-temp temperature">28°C</div>
-        </div>
-        <!--daily weather day 5-->
-        <div class="col">
-          <div class="day">Monday</div>
-          <div class="day-five-icon"><i class="fa-solid fa-sun"></i></div>
-          <div class="day-five-temp temperature">28°C</div>
-        </div>
-        <!--daily weather day 6-->
-        <div class="col">
-          <div class="day">Friday</div>
-          <div class="day-six-icon"><i class="fa-solid fa-sun"></i></div>
-          <div class="day-six-temp temperature">28°C</div>
-        </div>
-
-        <div class="end">
-          <a
-            href="https://github.com/rappcw/weather-app"
-            target="_blank"
-            alt="GitHub link"
-            class="temp-link"
-          >
-            Source code on GitHub
-          </a>
-          |
-          <a
-            href="https://www.linkedin.com/in/charmaine-rapp-a59a8472/"
-            target="_blank"
-            alt="LinkedIn profile"
-            class="temp-link"
-            >Coded by Charmaine Rapp</a
-          >
-        </div>
+      <div class="end">
+        <a
+          href="https://github.com/rappcw/weather-app"
+          target="_blank"
+          alt="GitHub link"
+          class="temp-link"
+        >
+          Source code on GitHub
+        </a>
+        |
+        <a
+          href="https://www.linkedin.com/in/charmaine-rapp-a59a8472/"
+          target="_blank"
+          alt="LinkedIn profile"
+          class="temp-link"
+          >Coded by Charmaine Rapp</a
+        >
       </div>
-      <!--end of daily table-->
     </div>
-
     <script src="src/script.js"></script>
   </body>
 </html>
