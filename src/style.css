@@ -49,7 +49,8 @@ i.UV-indicator-moderate {
 .large {
   font-size: 20px;
   position: relative;
-  top: -14px;
+  top: -10px;
+  padding: 0;
 }
 /* style of large C and F* as well as end links*/
 .temp-link {
