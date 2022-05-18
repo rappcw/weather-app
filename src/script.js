@@ -50,6 +50,7 @@ h2.innerHTML = loadDate(now);
 function showWeather(response) {
   console.log(response);
   document.querySelector("h1").innerHTML = response.data.city.name;
+
   document.querySelector("#description").innerHTML =
     response.data.list[0].weather[0].main;
   document.querySelector("#temp-now").innerHTML = Math.round(

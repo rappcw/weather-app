@@ -75,7 +75,7 @@ i.UV-indicator-moderate {
 /* font weight and align for value column in right table*/
 .bold {
   font-weight: 700;
-  text-align: center;
+  text-align: left;
 }
 /* padding on columns in right table*/
 .right {
