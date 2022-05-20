@@ -149,6 +149,31 @@ function getPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(findCityGeolocation2);
 }
+//change temperature unit Celsius
+function changeCelsius() {
+  let currentTemp = document.querySelector("#temp-now");
+  currentTemp.innerHTML = 20;
+  let changeCelsius = document.querySelector("#temp-celsius");
+  changeCelsius.classList.add("temp-selected");
+  let changeFahrenheit = document.querySelector("#temp-fahrenheit");
+  changeFahrenheit.classList.remove("temp-selected");
+}
+
+let showCelsius = document.querySelector("#temp-celsius");
+showCelsius.addEventListener("click", changeCelsius);
+
+//change temperature unit Fahrenheit
+function changeFahrenheit() {
+  let currentTemp = document.querySelector("#temp-now");
+  currentTemp.innerHTML = 69;
+  let changeFahrenheit = document.querySelector("#temp-fahrenheit");
+  changeFahrenheit.classList.add("temp-selected");
+  let changeCelsius = document.querySelector("#temp-celsius");
+  changeCelsius.classList.remove("temp-selected");
+}
+
+let showFahrenheit = document.querySelector("#temp-fahrenheit");
+showFahrenheit.addEventListener("click", changeFahrenheit);
 
 let userCity = document.querySelector("#submit-city-search");
 userCity.addEventListener("click", cityName);
