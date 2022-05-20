@@ -1,13 +1,18 @@
-//Display day, date and time now
+//FUNCTION to show local date and time
+function formatDate(timestamp) {
+  let locationDate = new Date(timestamp);
 
-function loadDate(now) {
-  let date = now.getDate();
+  console.log(timestamp);
+  console.log(locationDate);
 
-  let hour = now.getHours();
+  let date = locationDate.getDate();
+
+  let hour = locationDate.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
   }
-  let minute = now.getMinutes();
+
+  let minute = locationDate.getMinutes();
   if (minute < 10) {
     minute = `0${minute}`;
   }
@@ -21,7 +26,7 @@ function loadDate(now) {
     "Friday",
     "Saturday",
   ];
-  let day = days[now.getDay()];
+  let day = days[locationDate.getDay()];
 
   let months = [
     "January",
@@ -37,13 +42,10 @@ function loadDate(now) {
     "November",
     "December",
   ];
-  let month = months[now.getMonth()];
+  let month = months[locationDate.getMonth()];
 
   return `${day} ${date} ${month} ${hour}:${minute}`;
 }
-let now = new Date();
-let h2 = document.querySelector("h2");
-h2.innerHTML = loadDate(now);
 
 //FUNCTION 3 Open Weather data is received for city and displayed in HTML elements
 //showWeather uses the forecast API call
@@ -90,6 +92,9 @@ function showWeather2(response) {
   } else if (uvIndicator > 5) {
     uvIcon.classList.add("UV-indicator-high");
   }
+  document.querySelector("h2").innerHTML = formatDate(
+    response.data.current.dt * 1000
+  );
 }
 
 function getWeatherCoordinates(response) {
