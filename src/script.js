@@ -155,10 +155,8 @@ function changeCelsius(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#temp-now");
   currentTemp.innerHTML = celsiusTemperature;
-  let changeCelsius = document.querySelector("#temp-celsius");
-  changeCelsius.classList.add("temp-selected");
-  let changeFahrenheit = document.querySelector("#temp-fahrenheit");
-  changeFahrenheit.classList.remove("temp-selected");
+  showCelsius.classList.add("temp-selected");
+  showFahrenheit.classList.remove("temp-selected");
 }
 
 let showCelsius = document.querySelector("#temp-celsius");
@@ -169,10 +167,8 @@ function changeFahrenheit(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#temp-now");
   currentTemp.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
-  let changeFahrenheit = document.querySelector("#temp-fahrenheit");
-  changeFahrenheit.classList.add("temp-selected");
-  let changeCelsius = document.querySelector("#temp-celsius");
-  changeCelsius.classList.remove("temp-selected");
+  showCelsius.classList.remove("temp-selected");
+  showFahrenheit.classList.add("temp-selected");
 }
 
 let showFahrenheit = document.querySelector("#temp-fahrenheit");
