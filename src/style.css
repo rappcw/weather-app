@@ -52,16 +52,27 @@ i.UV-indicator-moderate {
   top: -10px;
   padding: 0;
 }
-/* style of large C and F* as well as end links*/
+/* style of end links*/
+.end-link {
+  text-decoration: none;
+  color: grey;
+}
+/* style of large C and F*/
 .temp-link {
   text-decoration: none;
   color: grey;
 }
-/* style of large C and F* awhen selected*/
+
+/* style of large C and F* when selected*/
 .temp-selected {
   text-decoration: none;
   color: black;
   font-weight: 900;
+  cursor: default;
+}
+.temp-selected:hover {
+  color: black;
+  cursor: default;
 }
 /* padding on current min and max row*/
 .current {
