@@ -12,10 +12,12 @@ h2 {
   display: inline-block;
   font-size: 14px;
 }
+
 img {
   height: 80px;
   padding: 0 15px 0 0;
 }
+
 i.UV-indicator {
   color: rgb(11, 94, 215);
 }
@@ -39,7 +41,11 @@ i.UV-indicator-moderate {
   border: 1px solid rgb(205, 206, 206);
   border-radius: 5px;
 }
-
+.forecast {
+  height: 30px;
+  margin: 0 auto;
+  padding: 0;
+}
 /* current temperature */
 .current-temp {
   font-size: 52px;
@@ -86,6 +92,11 @@ i.UV-indicator-moderate {
 .bold {
   font-weight: 900;
   text-align: center;
+}
+.medium {
+  font-weight: 500;
+  text-align: center;
+  padding: 0 0 0 5px;
 }
 /* padding on columns in right table*/
 .right {
