@@ -47,7 +47,6 @@ function formatDate(timestamp) {
   return `${day} ${date} ${month} ${hour}:${minute}`;
 }
 
-//FUNCTION 3 Open Weather data is received for city and displayed in HTML elements
 //showWeather uses the forecast API call
 function showWeather(response) {
   console.log(response);
@@ -80,9 +79,14 @@ function showWeather2(response) {
   } else if (rain === undefined) {
     rain = document.querySelector("#rain").innerHTML = 0;
   }
-  console.log(rain);
+  let weatherIcon = response.data.current.weather[0].icon;
+  console.log(weatherIcon);
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
+  );
   let uvIndicator = Math.round(response.data.current.uvi);
-
   document.querySelector("#uvNumber").innerHTML = uvIndicator;
   let uvIcon = document.querySelector("#uvIndicator");
   if (uvIndicator < 2) {
