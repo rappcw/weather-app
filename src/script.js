@@ -47,6 +47,27 @@ function formatDate(timestamp) {
   return `${day} ${date} ${month} ${hour}:${minute}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+              <div class="weather-forecast-day">${day}</div>
+              <img src="images/iconSun.jpeg" class="forecast" alt="" />
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max">28</span>°
+                <span class="weather-forecast-temperature-min">15</span>°
+              </div>
+            </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //showWeather uses the forecast API call
 function showWeather(response) {
   console.log(response);
@@ -67,6 +88,7 @@ function showWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.list[0].wind.speed
   );
+  displayForecast();
 }
 //showWeather2 uses the onecall API call - this is the second set of data received
 function showWeather2(response) {
