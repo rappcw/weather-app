@@ -92,9 +92,9 @@ function showWeather2(response) {
   let uvIcon = document.querySelector("#uvIndicator");
   if (uvIndicator < 2) {
     uvIcon.classList.add("UV-indicator-low");
-  } else if ((uvIndicator > 2) & (uvIndicator < 5)) {
+  } else if ((uvIndicator >= 2) & (uvIndicator < 5)) {
     uvIcon.classList.add("UV-indicator-moderate");
-  } else if (uvIndicator > 5) {
+  } else if (uvIndicator >= 5) {
     uvIcon.classList.add("UV-indicator-high");
   }
   document.querySelector("h2").innerHTML = formatDate(
