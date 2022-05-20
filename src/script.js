@@ -57,6 +57,7 @@ function showWeather(response) {
   document.querySelector("#temp-now").innerHTML = Math.round(
     response.data.list[0].main.temp
   );
+  celsiusTemperature = Math.round(response.data.list[0].main.temp);
   document.querySelector("#current-temp-min").innerHTML = Math.round(
     response.data.list[0].main.temp_min
   );
@@ -150,9 +151,10 @@ function getPosition(event) {
   navigator.geolocation.getCurrentPosition(findCityGeolocation2);
 }
 //change temperature unit Celsius
-function changeCelsius() {
+function changeCelsius(event) {
+  event.preventDefault();
   let currentTemp = document.querySelector("#temp-now");
-  currentTemp.innerHTML = 20;
+  currentTemp.innerHTML = celsiusTemperature;
   let changeCelsius = document.querySelector("#temp-celsius");
   changeCelsius.classList.add("temp-selected");
   let changeFahrenheit = document.querySelector("#temp-fahrenheit");
@@ -163,9 +165,10 @@ let showCelsius = document.querySelector("#temp-celsius");
 showCelsius.addEventListener("click", changeCelsius);
 
 //change temperature unit Fahrenheit
-function changeFahrenheit() {
+function changeFahrenheit(event) {
+  event.preventDefault();
   let currentTemp = document.querySelector("#temp-now");
-  currentTemp.innerHTML = 69;
+  currentTemp.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
   let changeFahrenheit = document.querySelector("#temp-fahrenheit");
   changeFahrenheit.classList.add("temp-selected");
   let changeCelsius = document.querySelector("#temp-celsius");
@@ -183,3 +186,5 @@ currentLocation.addEventListener("click", getPosition);
 
 //set default city to display on page load
 findCityGeolocation("Perth");
+
+let celsiusTemperature = null;
