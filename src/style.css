@@ -93,11 +93,6 @@ i.UV-indicator-moderate {
   font-weight: 900;
   text-align: center;
 }
-.medium {
-  font-weight: 500;
-  text-align: center;
-  padding: 0 0 0 5px;
-}
 /* padding on columns in right table*/
 .right {
   padding: 0;
@@ -107,11 +102,22 @@ i.UV-indicator-moderate {
   padding: 0 0 0 10px;
   font-size: 16px;
 }
+.weather-forecast {
+  padding: 10px;
+  text-align: center;
+}
 /* style for each day forcast day name*/
-.day {
-  padding: 10px 0 0 0;
+.weather-forecast-day {
   font-weight: 500;
   color: rgb(11, 94, 215);
+}
+.weather-forecast-temperature-max {
+  font-weight: 900;
+}
+.weather-forecast-temperature-min {
+  font-weight: 500;
+
+  padding: 0 0 0 5px;
 }
 /* padding for end row*/
 .end {
