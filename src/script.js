@@ -1,10 +1,6 @@
 //FUNCTION to show local date and time
 function formatDate(timestamp) {
   let locationDate = new Date(timestamp);
-
-  console.log(timestamp);
-  console.log(locationDate);
-
   let date = locationDate.getDate();
 
   let hour = locationDate.getHours();
@@ -48,7 +44,6 @@ function formatDate(timestamp) {
 }
 
 function formatForecastDay(timestamp) {
-  console.log(timestamp);
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = [

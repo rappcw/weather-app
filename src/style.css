@@ -25,10 +25,11 @@ i.UV-indicator-high {
   color: crimson;
 }
 i.UV-indicator-low {
-  color: #2e8b57;
+  color: #0c9547;
 }
 i.UV-indicator-moderate {
-  color: #ffd700;
+  color: rgb(255, 165, 0);
+  /*color: #ffd700;*/
 }
 .app-wrapper {
   position: absolute;
@@ -62,6 +63,7 @@ i.UV-indicator-moderate {
 /* style of end links*/
 .end-link {
   text-decoration: none;
+
   color: grey;
 }
 /* style of large C and F*/
@@ -106,6 +108,7 @@ i.UV-indicator-moderate {
 .weather-forecast {
   padding: 10px;
   text-align: center;
+  font-size: 14px;
 }
 /* style for each day forcast day name*/
 .weather-forecast-day {
@@ -124,6 +127,7 @@ i.UV-indicator-moderate {
 /* padding for end row*/
 .end {
   padding: 10px 10px 0;
+  font-size: 12px;
   text-align: center;
 }
 /* search button*/
