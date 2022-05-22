@@ -52,11 +52,8 @@ function formatForecastDay(timestamp) {
 
 function displayForecast(dailyForecast) {
   let forecast = dailyForecast.data.daily;
-  console.log(forecast);
-
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = ``;
-
   forecast.forEach(function (forecastDay, index) {
     if (index > 0 && index < 7) {
       let forecastMax = Math.round(forecastDay.temp.max);
@@ -84,6 +81,7 @@ function displayForecast(dailyForecast) {
 
 //showWeather uses the forecast API call
 function showWeather(response) {
+  console.log("forecast");
   console.log(response);
   document.querySelector("h1").innerHTML = response.data.city.name;
 
@@ -100,8 +98,8 @@ function showWeather(response) {
 }
 //showWeather2 uses the onecall API call - this is the second set of data received
 function showWeather2(response) {
+  console.log("onecall");
   console.log(response);
-
   let rain = response.data.daily[0].rain;
   if (rain !== undefined) {
     rain = document.querySelector("#rain").innerHTML = Math.round(
@@ -111,7 +109,6 @@ function showWeather2(response) {
     rain = document.querySelector("#rain").innerHTML = 0;
   }
   let weatherIcon = response.data.current.weather[0].icon;
-  console.log(weatherIcon);
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute("src", `images/${weatherIcon}.svg`);
   let altText = response.data.current.weather[0].main;
@@ -119,9 +116,10 @@ function showWeather2(response) {
   let uvIndicator = Math.round(response.data.current.uvi);
   document.querySelector("#uvNumber").innerHTML = uvIndicator;
   let uvIcon = document.querySelector("#uvIndicator");
+  console.log(uvIndicator);
   if (uvIndicator < 2) {
     uvIcon.classList.add("UV-indicator-low");
-  } else if ((uvIndicator >= 2) & (uvIndicator < 5)) {
+  } else if ((uvIndicator >= 2) & (uvIndicator < 4)) {
     uvIcon.classList.add("UV-indicator-moderate");
   } else if (uvIndicator >= 5) {
     uvIcon.classList.add("UV-indicator-high");
@@ -138,7 +136,6 @@ function showWeather2(response) {
 }
 
 function getWeatherCoordinates(response) {
-  //console.log(response);
   let latitude = response.data[0].lat;
   let longitude = response.data[0].lon;
   let apiKey = "442a9a6ad3254edf75193558d4248959";
@@ -146,7 +143,6 @@ function getWeatherCoordinates(response) {
   axios.get(apiUrl).then(showWeather);
 }
 function getWeatherCoordinates2(response) {
-  //console.log(response);
   let latitude = response.data[0].lat;
   let longitude = response.data[0].lon;
   let apiKey = "442a9a6ad3254edf75193558d4248959";
@@ -158,7 +154,6 @@ function getWeatherCoordinates2(response) {
 function findCityGeolocation(city) {
   console.log(city);
   userCity = city;
-  //document.querySelector("h1").innerHTML = userCity;
   let apiKey = "442a9a6ad3254edf75193558d4248959";
   let apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${userCity}&appid=${apiKey}`;
   axios.get(apiUrl).then(getWeatherCoordinates2);
