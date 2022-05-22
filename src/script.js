@@ -46,15 +46,7 @@ function formatDate(timestamp) {
 function formatForecastDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
 }
 
@@ -73,13 +65,12 @@ function displayForecast(dailyForecast) {
 
       forecastHTML =
         forecastHTML +
-        `<div class="col">
+        `<div class="col-2">
               <div class="weather-forecast-day">${formatForecastDay(
                 forecastDay.dt
               )}</div>
               <img src="images/${forecastIcon}.svg" class="forecast" alt="" />
               <div class="weather-forecast-temperatures">
-                
                 <span class="weather-forecast-temperature-min">${forecastMin}</span>°
                 <span class="weather-forecast-temperature-max">${forecastMax}</span>°
               </div>
