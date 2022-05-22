@@ -49,6 +49,7 @@ i.UV-indicator-moderate {
 /* current temperature */
 .current-temp {
   font-size: 52px;
+  font-weight: 500;
   vertical-align: bottom;
 }
 /* size and position of large C and F*/
@@ -112,11 +113,12 @@ i.UV-indicator-moderate {
   color: rgb(11, 94, 215);
 }
 .weather-forecast-temperature-max {
-  font-weight: 900;
+  font-weight: 700;
+  color: rgb(58, 59, 60);
 }
 .weather-forecast-temperature-min {
-  font-weight: 500;
-
+  font-weight: 700;
+  color: rgb(104, 105, 107);
   padding: 0 0 0 5px;
 }
 /* padding for end row*/

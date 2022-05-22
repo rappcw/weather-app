@@ -70,14 +70,15 @@ function displayForecast(dailyForecast) {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = ``;
 
-  forecast.forEach(function (forecastDay) {
-    let forecastMax = Math.round(forecastDay.temp.max);
-    let forecastMin = Math.round(forecastDay.temp.min);
-    let forecastIcon = forecastDay.weather[0].icon;
+  forecast.forEach(function (forecastDay, index) {
+    if (index > 0 && index < 7) {
+      let forecastMax = Math.round(forecastDay.temp.max);
+      let forecastMin = Math.round(forecastDay.temp.min);
+      let forecastIcon = forecastDay.weather[0].icon;
 
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
               <div class="weather-forecast-day">${formatForecastDay(
                 forecastDay.dt
               )}</div>
@@ -88,6 +89,7 @@ function displayForecast(dailyForecast) {
                 <span class="weather-forecast-temperature-max">${forecastMax}</span>°
               </div>
             </div>`;
+    }
   });
 
   forecastHTML = forecastHTML;
