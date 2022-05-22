@@ -47,6 +47,22 @@ function formatDate(timestamp) {
   return `${day} ${date} ${month} ${hour}:${minute}`;
 }
 
+function formatForecastDay(timestamp) {
+  console.log(timestamp);
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
+}
+
 function displayForecast(dailyForecast) {
   let forecast = dailyForecast.data.daily;
   console.log(forecast);
@@ -57,14 +73,19 @@ function displayForecast(dailyForecast) {
   forecast.forEach(function (forecastDay) {
     let forecastMax = Math.round(forecastDay.temp.max);
     let forecastMin = Math.round(forecastDay.temp.min);
+    let forecastIcon = forecastDay.weather[0].icon;
+
     forecastHTML =
       forecastHTML +
       `<div class="col">
-              <div class="weather-forecast-day">${forecastDay.dt}</div>
-              <img src="images/iconSun.jpeg" class="forecast" alt="" />
+              <div class="weather-forecast-day">${formatForecastDay(
+                forecastDay.dt
+              )}</div>
+              <img src="http://openweathermap.org/img/wn/${forecastIcon}@2x.png" class="forecast" alt="" />
               <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-temperature-max">${forecastMax}</span>°
+                
                 <span class="weather-forecast-temperature-min">${forecastMin}</span>°
+                <span class="weather-forecast-temperature-max">${forecastMax}</span>°
               </div>
             </div>`;
   });
@@ -84,12 +105,7 @@ function showWeather(response) {
     response.data.list[0].main.temp
   );
   celsiusTemperature = Math.round(response.data.list[0].main.temp);
-  document.querySelector("#current-temp-min").innerHTML = Math.round(
-    response.data.list[0].main.temp_min
-  );
-  document.querySelector("#current-temp-max").innerHTML = Math.round(
-    response.data.list[0].main.temp_max
-  );
+
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.list[0].wind.speed
   );
@@ -124,6 +140,12 @@ function showWeather2(response) {
   } else if (uvIndicator >= 5) {
     uvIcon.classList.add("UV-indicator-high");
   }
+  document.querySelector("#current-temp-min").innerHTML = Math.round(
+    response.data.daily[0].temp.min
+  );
+  document.querySelector("#current-temp-max").innerHTML = Math.round(
+    response.data.daily[0].temp.max
+  );
   document.querySelector("h2").innerHTML = formatDate(
     response.data.current.dt * 1000
   );
