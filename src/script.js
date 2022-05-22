@@ -82,7 +82,7 @@ function displayForecast(dailyForecast) {
               <div class="weather-forecast-day">${formatForecastDay(
                 forecastDay.dt
               )}</div>
-              <img src="http://openweathermap.org/img/wn/${forecastIcon}@2x.png" class="forecast" alt="" />
+              <img src="images/${forecastIcon}.svg" class="forecast" alt="" />
               <div class="weather-forecast-temperatures">
                 
                 <span class="weather-forecast-temperature-min">${forecastMin}</span>°
@@ -125,11 +125,9 @@ function showWeather2(response) {
     rain = document.querySelector("#rain").innerHTML = 0;
   }
   let weatherIcon = response.data.current.weather[0].icon;
+  console.log(weatherIcon);
   let iconElement = document.querySelector("#weather-icon");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
-  );
+  iconElement.setAttribute("src", `images/${weatherIcon}.svg`);
   let altText = response.data.current.weather[0].main;
   iconElement.setAttribute("alt", `${altText}`);
   let uvIndicator = Math.round(response.data.current.uvi);
