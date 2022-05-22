@@ -47,7 +47,9 @@ function formatDate(timestamp) {
   return `${day} ${date} ${month} ${hour}:${minute}`;
 }
 
-function displayForecast() {
+function displayForecast(dailyForecast) {
+  console.log("daily forecast");
+  console.log(dailyForecast.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = ``;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
@@ -88,7 +90,6 @@ function showWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.list[0].wind.speed
   );
-  displayForecast();
 }
 //showWeather2 uses the onecall API call - this is the second set of data received
 function showWeather2(response) {
@@ -140,6 +141,7 @@ function getWeatherCoordinates2(response) {
   let apiKey = "442a9a6ad3254edf75193558d4248959";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather2);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function findCityGeolocation(city) {
