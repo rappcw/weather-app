@@ -116,14 +116,24 @@ function showWeather2(response) {
   let uvIndicator = Math.round(response.data.current.uvi);
   document.querySelector("#uvNumber").innerHTML = uvIndicator;
   let uvIcon = document.querySelector("#uvIndicator");
-  console.log(uvIndicator);
+
   if (uvIndicator < 2) {
+    uvIcon.classList.remove("UV-indicator");
+    uvIcon.classList.remove("UV-indicator-high");
+    uvIcon.classList.remove("UV-indicator-moderate");
     uvIcon.classList.add("UV-indicator-low");
   } else if ((uvIndicator >= 2) & (uvIndicator < 4)) {
+    uvIcon.classList.remove("UV-indicator");
+    uvIcon.classList.remove("UV-indicator-low");
+    uvIcon.classList.remove("UV-indicator-high");
     uvIcon.classList.add("UV-indicator-moderate");
-  } else if (uvIndicator >= 5) {
+  } else if (uvIndicator > 5) {
+    uvIcon.classList.remove("UV-indicator");
+    uvIcon.classList.remove("UV-indicator-low");
+    uvIcon.classList.remove("UV-indicator-moderate");
     uvIcon.classList.add("UV-indicator-high");
   }
+
   document.querySelector("#current-temp-min").innerHTML = Math.round(
     response.data.daily[0].temp.min
   );
