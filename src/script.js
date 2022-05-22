@@ -48,20 +48,23 @@ function formatDate(timestamp) {
 }
 
 function displayForecast(dailyForecast) {
-  console.log("daily forecast");
-  console.log(dailyForecast.data.daily);
+  let forecast = dailyForecast.data.daily;
+  console.log(forecast);
+
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = ``;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
-  days.forEach(function (day) {
+
+  forecast.forEach(function (forecastDay) {
+    let forecastMax = Math.round(forecastDay.temp.max);
+    let forecastMin = Math.round(forecastDay.temp.min);
     forecastHTML =
       forecastHTML +
       `<div class="col">
-              <div class="weather-forecast-day">${day}</div>
+              <div class="weather-forecast-day">${forecastDay.dt}</div>
               <img src="images/iconSun.jpeg" class="forecast" alt="" />
               <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-temperature-max">28</span>°
-                <span class="weather-forecast-temperature-min">15</span>°
+                <span class="weather-forecast-temperature-max">${forecastMax}</span>°
+                <span class="weather-forecast-temperature-min">${forecastMin}</span>°
               </div>
             </div>`;
   });
