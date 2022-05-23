@@ -159,7 +159,7 @@ function getWeatherCoordinates2(response) {
 }
 
 function findCityGeolocation(city) {
-  console.log(city);
+  //console.log(city);
   userCity = city;
   let apiKey = "442a9a6ad3254edf75193558d4248959";
   let apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${userCity}&appid=${apiKey}`;
@@ -174,7 +174,7 @@ function cityName(event) {
 }
 
 function findCityGeolocation2(geocoordinates) {
-  console.log(geocoordinates);
+  //console.log(geocoordinates);
   let latitude = geocoordinates.coords.latitude;
   let longitude = geocoordinates.coords.longitude;
   let apiKey = "442a9a6ad3254edf75193558d4248959";
@@ -182,6 +182,7 @@ function findCityGeolocation2(geocoordinates) {
   axios.get(apiUrl).then(showWeather);
   apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather2);
+  axios.get(apiUrl).then(displayForecast);
 }
 function getPosition(event) {
   event.preventDefault();
