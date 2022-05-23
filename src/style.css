@@ -31,19 +31,24 @@ i.UV-indicator-moderate {
   color: rgb(255, 165, 0);
 }
 .app-wrapper {
-  position: absolute;
-  margin: 20px auto;
+  margin: 0 auto;
   max-width: 600px;
 }
 /* container of whole page */
 .outline {
-  padding: 30px;
+  padding: 10px;
   border: 1px solid rgb(205, 206, 206);
   border-radius: 5px;
 }
+.form-control {
+}
 .forecast {
   height: 40px;
+  width: 40px;
   margin: 0 auto;
+  padding: 0;
+}
+.forecast-cell {
   padding: 0;
 }
 /* current temperature */
@@ -107,7 +112,7 @@ i.UV-indicator-moderate {
 .weather-forecast {
   padding: 10px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 /* style for each day forcast day name*/
 .weather-forecast-day {
@@ -120,8 +125,12 @@ i.UV-indicator-moderate {
 }
 .weather-forecast-temperature-min {
   font-weight: 700;
-  color: rgb(104, 105, 107);
-  padding: 0 0 0 5px;
+  color: rgb(139, 140, 143);
+  padding: 0;
+}
+.search {
+  padding: 0;
+  margin: 0;
 }
 /* padding for end row*/
 .end {
@@ -135,11 +144,15 @@ i.UV-indicator-moderate {
   border: none; /* Remove borders */
   color: white; /* White text */
   padding: 2px 6px; /* Some padding */
-  font-size: 24px; /* Set a font size */
+  font-size: 22px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
   border-radius: 10px;
+  align-items: center;
 }
-
+.button {
+  margin: 0 10px 0 10px;
+  padding: 0;
+}
 /* Darker background on mouse-over */
 .btn:hover {
   background-color: rgb(11, 94, 215);
@@ -151,7 +164,7 @@ i.UV-indicator-moderate {
   border: none; /* Remove borders */
   color: white; /* White text */
   padding: 2px 6px; /* Some padding */
-  font-size: 24px; /* Set a font size */
+  font-size: 22px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
   border-radius: 10px;
 }
