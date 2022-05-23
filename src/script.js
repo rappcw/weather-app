@@ -39,7 +39,6 @@ function formatDate(timestamp) {
     "December",
   ];
   let month = months[locationDate.getMonth()];
-
   return `${day} ${date} ${month} ${hour}:${minute}`;
 }
 
@@ -81,25 +80,23 @@ function displayForecast(dailyForecast) {
 
 //showWeather uses the forecast API call
 function showWeather(response) {
-  console.log("forecast");
-  console.log(response);
+  //console.log("forecast");
+  //console.log(response);
   document.querySelector("h1").innerHTML = response.data.city.name;
-
   document.querySelector("#description").innerHTML =
     response.data.list[0].weather[0].main;
   document.querySelector("#temp-now").innerHTML = Math.round(
     response.data.list[0].main.temp
   );
-  celsiusTemperature = Math.round(response.data.list[0].main.temp);
-
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.list[0].wind.speed
   );
+  //celsiusTemperature = Math.round(response.data.list[0].main.temp);
 }
 //showWeather2 uses the onecall API call - this is the second set of data received
 function showWeather2(response) {
-  console.log("onecall");
-  console.log(response);
+  //console.log("onecall");
+  //console.log(response);
   let rain = response.data.daily[0].rain;
   if (rain !== undefined) {
     rain = document.querySelector("#rain").innerHTML = Math.round(
@@ -190,19 +187,18 @@ function getPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(findCityGeolocation2);
 }
-//change temperature unit Celsius
-function changeCelsius(event) {
-  event.preventDefault();
-  let currentTemp = document.querySelector("#temp-now");
-  currentTemp.innerHTML = celsiusTemperature;
-  showCelsius.classList.add("temp-selected");
-  showFahrenheit.classList.remove("temp-selected");
-}
 
-let showCelsius = document.querySelector("#temp-celsius");
-showCelsius.addEventListener("click", changeCelsius);
+let userCity = document.querySelector("#submit-city-search");
+userCity.addEventListener("click", cityName);
+
+let currentLocation = document.querySelector("#submit-current-location");
+currentLocation.addEventListener("click", getPosition);
+
+//set default city to display on page load
+findCityGeolocation("Perth");
 
 //change temperature unit Fahrenheit
+/*
 function changeFahrenheit(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#temp-now");
@@ -214,13 +210,16 @@ function changeFahrenheit(event) {
 let showFahrenheit = document.querySelector("#temp-fahrenheit");
 showFahrenheit.addEventListener("click", changeFahrenheit);
 
-let userCity = document.querySelector("#submit-city-search");
-userCity.addEventListener("click", cityName);
-
-let currentLocation = document.querySelector("#submit-current-location");
-currentLocation.addEventListener("click", getPosition);
-
-//set default city to display on page load
-findCityGeolocation("Perth");
-
+//change temperature unit Celsius
+function changeCelsius(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#temp-now");
+  currentTemp.innerHTML = celsiusTemperature;
+  showCelsius.classList.add("temp-selected");
+  showFahrenheit.classList.remove("temp-selected");
+}
 let celsiusTemperature = null;
+let showCelsius = document.querySelector("#temp-celsius");
+showCelsius.addEventListener("click", changeCelsius);
+
+*/

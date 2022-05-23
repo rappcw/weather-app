@@ -22,7 +22,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
@@ -55,12 +54,9 @@
         <!--city day and date-->
         <h1></h1>
         <h2></h2>
-
         <!--start of table-->
-
         <div class="row">
           <!--left side of table-->
-          <!--today large icon and temp-->
           <div class="col">
             <img src="" class="" id="weather-icon" alt="" />
             <span class="current-temp" id="temp-now"></span>
@@ -68,19 +64,18 @@
               <a href="#" class="temp-link temp-selected" id="temp-celsius"
                 >°C</a
               >
-              |
-              <a href="#" class="temp-link" id="temp-fahrenheit">°F</a>
+              <!--|
+             <a href="#" class="temp-link" id="temp-fahrenheit">°F</a>-->
             </span>
           </div>
           <!--right side of table-->
 
           <div class="col side">
-            <!--rain-->
             <div class="row">
               <div class="col-2 bold right" id="rain"></div>
               <div class="col right">rain (ml)</div>
             </div>
-            <!--UV-->
+
             <div class="row">
               <div class="col-2 right">
                 <i class="fa-solid fa-circle" id="uvIndicator"></i>
@@ -88,13 +83,13 @@
               </div>
               <div class="col right">UV</div>
             </div>
-            <!--wind-->
+
             <div class="row">
               <div class="col-2 bold right" id="wind"></div>
               <div class="col right">wind (kmh)</div>
             </div>
           </div>
-          <!--today min and max-->
+
           <div class="current">
             <span
               class="weather-forecast-temperature-min"
@@ -107,7 +102,7 @@
               id="current-temp-max"
             ></span
             ><span class="">°</span>max
-            <!--description-->
+
             <span class="description bold" id="description"> </span>
           </div>
         </div>
