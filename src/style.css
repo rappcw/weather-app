@@ -73,10 +73,12 @@ i.UV-indicator-moderate {
 /* padding on current min and max row*/
 .current {
   padding: 12px 0 0 15px;
+  font-weight: 500;
 }
 
 .description {
   font-size: 16px;
+  padding: 0 5px 0 0;
 }
 
 .right {
