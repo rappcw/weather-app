@@ -41,7 +41,9 @@ i.UV-indicator-moderate {
   border: 1px solid rgb(205, 206, 206);
   border-radius: 5px;
 }
-
+.search-col {
+  width: 100%;
+}
 .forecast {
   height: 40px;
   width: 40px;
@@ -135,7 +137,7 @@ i.UV-indicator-moderate {
   font-size: 20px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
   border-radius: 10px;
-  width: 32px;
+  width: 30px;
 }
 .btn2 {
   position: relative;
@@ -147,7 +149,7 @@ i.UV-indicator-moderate {
   font-size: 20px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
   border-radius: 10px;
-  width: 32px;
+  width: 30px;
 }
 
 /* Darker background on mouse-over */
