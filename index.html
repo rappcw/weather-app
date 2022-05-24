@@ -28,8 +28,8 @@
     <div class="app-wrapper">
       <div class="container-fluid outline">
         <form>
-          <div class="row no-gutters border">
-            <div class="col">
+          <div class="row">
+            <div class="col-10">
               <input
                 type="search"
                 class="form-control"
@@ -39,13 +39,11 @@
                 id="text-city-search"
               />
             </div>
-            <div class="col-1 border">
-              <button class="btn" id="submit-city-search">
+            <div class="col border">
+              <button class="btn border" id="submit-city-search">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
-            </div>
-            <div class="col-1">
-              <button class="btn2" id="submit-current-location">
+              <button class="btn2 border" id="submit-current-location">
                 <i class="fa-solid fa-magnifying-glass-location"></i>
               </button>
             </div>
@@ -55,23 +53,16 @@
         <h1></h1>
         <h2></h2>
         <!--start of table-->
-        <div class="row">
-          <!--left side of table-->
+        <div class="row border">
           <div class="col">
             <img src="" class="" id="weather-icon" alt="" />
             <span class="current-temp" id="temp-now"></span>
-            <span class="large">
-              <a href="#" class="temp-link temp-selected" id="temp-celsius"
-                >°C</a
-              >
-              <!--|
-             <a href="#" class="temp-link" id="temp-fahrenheit">°F</a>-->
-            </span>
+            <span class="current-celsius" id="temp-celsius">°C</span>
           </div>
           <!--right side of table-->
 
-          <div class="col side">
-            <div class="row">
+          <div class="col side border">
+            <div class="row border">
               <div class="col-2 bold right" id="rain"></div>
               <div class="col right">rain (ml)</div>
             </div>
@@ -91,6 +82,7 @@
           </div>
 
           <div class="current">
+            <span class="description bold border" id="description"> </span>
             <span
               class="weather-forecast-temperature-min"
               id="current-temp-min"
@@ -102,12 +94,9 @@
               id="current-temp-max"
             ></span
             ><span class="">°</span>max
-
-            <span class="description bold" id="description"> </span>
           </div>
         </div>
 
-        <!--daily weather-->
         <div class="weather-forecast">
           <div class="row" id="forecast">
             <!--<div class="col">

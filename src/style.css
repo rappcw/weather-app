@@ -52,44 +52,32 @@ i.UV-indicator-moderate {
 }
 /* current temperature */
 .current-temp {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
-  vertical-align: bottom;
+  position: relative;
+  top: 2px;
+  padding: 0;
+  margin: 0;
 }
 /* size and position of large C and F*/
-.large {
+.current-celsius {
   font-size: 15px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
   position: relative;
   top: -19px;
-  padding: 0;
-}
-/* style of end links*/
-.end-link {
-  text-decoration: none;
-
-  color: grey;
-}
-/* style of large C and F*/
-.temp-link {
-  text-decoration: none;
-  color: grey;
 }
 
-/* style of large C and F* when selected*/
-.temp-selected {
-  text-decoration: none;
-  color: black;
-  font-weight: 900;
-  cursor: default;
-}
-.temp-selected:hover {
-  color: black;
-  cursor: default;
-}
 /* padding on current min and max row*/
 .current {
   padding: 12px 0 0 15px;
 }
+
+.description {
+  font-size: 16px;
+}
+
 /* font size for right-side table*/
 .side {
   font-size: 15px;
@@ -104,10 +92,7 @@ i.UV-indicator-moderate {
   padding: 0;
 }
 /* style for description*/
-.description {
-  padding: 0 0 0 10px;
-  font-size: 16px;
-}
+
 .weather-forecast {
   padding: 10px;
   text-align: center;
@@ -115,7 +100,7 @@ i.UV-indicator-moderate {
 }
 /* style for each day forcast day name*/
 .weather-forecast-day {
-  font-weight: 500;
+  font-weight: 600;
   color: rgb(11, 94, 215);
 }
 .weather-forecast-temperature-max {
@@ -127,7 +112,10 @@ i.UV-indicator-moderate {
   color: rgb(139, 140, 143);
   padding: 0;
 }
-
+.end-link {
+  text-decoration: none;
+  color: grey;
+}
 /* padding for end row*/
 .end {
   padding: 10px 10px 0;
@@ -135,20 +123,28 @@ i.UV-indicator-moderate {
   text-align: center;
 }
 
-.col-1 {
-  display: inline;
-  padding: 0;
-  margin: 0 5px 0 0;
-}
 /* search button*/
 .btn {
   background-color: dodgerblue; /* Blue background */
   border: none; /* Remove borders */
   color: white; /* White text */
   padding: 2px 6px; /* Some padding */
-  font-size: 22px; /* Set a font size */
+  font-size: 20px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
   border-radius: 10px;
+  width: 15px;
+}
+.btn2 {
+  position: relative;
+  top: 2px;
+  background-color: rgb(94, 95, 95); /* grey background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 2px 6px; /* Some padding */
+  font-size: 20px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  border-radius: 10px;
+  width: 15px;
 }
 
 /* Darker background on mouse-over */
@@ -157,15 +153,6 @@ i.UV-indicator-moderate {
   color: white; /* White text */
 }
 /* current location button*/
-.btn2 {
-  background-color: rgb(94, 95, 95); /* grey background */
-  border: none; /* Remove borders */
-  color: white; /* White text */
-  padding: 2px 6px; /* Some padding */
-  font-size: 22px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
-  border-radius: 10px;
-}
 
 /* Darker background on mouse-over */
 .btn2:hover {
