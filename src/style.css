@@ -41,9 +41,7 @@ i.UV-indicator-moderate {
   border: 1px solid rgb(205, 206, 206);
   border-radius: 5px;
 }
-.search-col {
-  width: 100%;
-}
+
 .forecast {
   height: 40px;
   width: 40px;
@@ -85,19 +83,22 @@ i.UV-indicator-moderate {
   padding: 0;
 }
 .side {
-  padding: 10px 0 0 0;
   font-size: 12px;
   font-weight: 500;
+  padding: 10px 0 0 0;
 }
 /* font bold and center*/
 .bold {
   font-weight: 900;
   text-align: center;
 }
-/* padding on columns in right table*/
-
+.first {
+  padding: 0 4px 0 0;
+}
 /* style for description*/
-
+.uv.row {
+  padding: 0;
+}
 .weather-forecast {
   padding: 10px;
   text-align: center;
