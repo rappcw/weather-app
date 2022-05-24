@@ -42,6 +42,21 @@ function formatDate(timestamp) {
   return `${day} ${date} ${month} ${hour}:${minute}`;
 }
 
+function formatSun(suntime) {
+  let time = new Date(suntime);
+
+  let hour = time.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+
+  let minute = time.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  return `${hour}:${minute}`;
+}
+
 function formatForecastDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -96,7 +111,7 @@ function showWeather(response) {
 //showWeather2 uses the onecall API call - this is the second set of data received
 function showWeather2(response) {
   //console.log("onecall");
-  //console.log(response);
+  console.log(response);
   let rain = response.data.daily[0].rain;
   if (rain !== undefined) {
     rain = document.querySelector("#rain").innerHTML = Math.round(
@@ -139,6 +154,12 @@ function showWeather2(response) {
   );
   document.querySelector("h2").innerHTML = formatDate(
     response.data.current.dt * 1000
+  );
+  document.querySelector("#sunrise").innerHTML = formatSun(
+    response.data.current.sunrise * 1000
+  );
+  document.querySelector("#sunset").innerHTML = formatSun(
+    response.data.current.sunset * 1000
   );
 }
 

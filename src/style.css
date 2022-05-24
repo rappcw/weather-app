@@ -80,7 +80,17 @@ i.UV-indicator-moderate {
   font-size: 16px;
   padding: 0 5px 0 0;
 }
-
+.small {
+  padding: 0 0 0 15px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.suntime {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: -4px;
+}
 .right {
   padding: 0;
 }
@@ -101,6 +111,7 @@ i.UV-indicator-moderate {
 .uv.row {
   padding: 0;
 }
+
 .weather-forecast {
   padding: 10px;
   text-align: center;
