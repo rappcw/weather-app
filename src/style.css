@@ -126,7 +126,6 @@ i.UV-indicator-moderate {
   display: flex;
   justify-content: space-between;
 }
-
 .weather-forecast-day {
   padding: 15px 0 0 0;
   font-weight: 600;
@@ -142,13 +141,12 @@ i.UV-indicator-moderate {
 .small {
   font-size: 12px;
 }
-.end-link {
-  text-decoration: none;
-  color: grey;
-}
-/* padding for end row*/
 .end {
   padding: 10px 10px 0;
   font-size: 12px;
   text-align: center;
+}
+.end-link {
+  text-decoration: none;
+  color: grey;
 }
