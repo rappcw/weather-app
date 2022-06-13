@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
-    <link
+    <!--<link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
-    />
+    />-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,95 +29,66 @@
     <div class="app-wrapper">
       <div class="container-fluid outline">
         <form>
-          <div class="row">
-            <div class="col-9">
-              <input
+          <div class="search-row">
+           <input
                 type="search"
-                class="form-control"
+                class="search-form"
                 placeholder="Enter city name"
                 autocomplete="off"
                 autofocus="on"
                 id="text-city-search"
               />
-            </div>
-            <div class="col">
-              <button class="btn" id="submit-city-search">
+              <button class="button button-hover button-blue" id="submit-city-search">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
-              <button class="btn2" id="submit-current-location">
+              <button class="button button-hover button-grey" id="submit-current-location">
                 <i class="fa-solid fa-magnifying-glass-location"></i>
               </button>
             </div>
-          </div>
         </form>
-        <!--city day and date-->
+        
         <h1></h1>
         <h2></h2>
-        <!--start of table-->
         <div class="row">
-          <div class="col">
-            <img src="" class="" id="weather-icon" alt="" />
-            <span class="current-temp" id="temp-now"></span>
-            <span class="current-celsius" id="temp-celsius">°C</span>
+          <img src="" id="weather-icon" alt="" />
+          <span class="current-temp" id="temp-now"></span>
+          <span class="current-celsius" id="temp-celsius">°C</span>
+          
+          <div class="column">
+            <span>
+            <span>Rain:</span>
+            <span class="bold" id="rain"> </span> ml
+          </span>
+          <span>
+            <span class="first">UV:</span>
+            <span class="bold" id="uvNumber"> </span>
+            <i class="fa-solid fa-circle" id="uvIndicator"></i>
+          </span>
+          <span>
+            <span class="first">Wind:</span>
+            <span class="bold" id="wind"></span> m/s
+          </span>
           </div>
-          <!--right side of table-->
-
-          <div class="col side">
-            <div class="row">
-              <div class="col">
-                <span first>Rain:</span>
-                <span class="bold" id="rain"> </span> ml
-              </div>
-            </div>
-
-            <div class="row uv-row">
-              <div class="col">
-                <span class="first">UV:</span>
-                <span class="bold" id="uvNumber"> </span>
-                <i class="fa-solid fa-circle" id="uvIndicator"></i>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <span class="first">Wind:</span>
-                <span class="bold" id="wind"></span> m/s
-              </div>
-            </div>
-          </div>
-
-          <div class="current">
-            <span class="description bold" id="description"> </span>
-            <span
-              class="weather-forecast-temperature-min"
+        </div>
+        <div>
+          <span class="description bold" id="description"> </span>
+          <span
+              class="weather-forecast-temperature"
               id="current-temp-min"
-            ></span
-            ><span class="">°</span>min&nbsp
-
+            ></span><span class="">°</span> min&nbsp
             <span
-              class="weather-forecast-temperature-max"
+              class="weather-forecast-temperature"
               id="current-temp-max"
             ></span
-            ><span class="">°</span>max
-            <span class="small"><img src="images/sunrise.png" class="suntime"> <span id="sunrise"></span>
-            <span class="small"><img src="images/sunrise.png" class="suntime"> <span id="sunset"></span></span>
+            ><span class="">°</span> max
+            <span><img src="images/sunrise.png" class="suntime"> <span id="sunrise"></span>
+            <span><img src="images/sunrise.png" class="suntime"> <span id="sunset"></span></span>
+          </div>
+          <div class="forecast-row" id="forecast">
+            <!--this is where the forecast goes-->
           </div>
         </div>
-
-        <div class="weather-forecast">
-          <div class="row" id="forecast">
-            <!--<div class="col">
-              <div class="weather-forecast-day"></div>
-              <img src="" class="forecast" alt="" />
-              <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-temperature-max"></span>°
-                <span class="weather-forecast-temperature-min"></span>°
-              </div>
-            </div>-->
-          </div>
-        </div>
-        <!--end of daily table-->
-      </div>
+         
       <div class="end">
         <a
           href="https://github.com/rappcw/weather-app"
@@ -136,6 +107,7 @@
           >Coded by Charmaine Rapp</a
         ><br />
         <a href="https://www.flaticon.com/free-icons/dawn" title="dawn icons" class="end-link"><img src="images/sunrise.png" class="suntime"> <img src="images/sunrise.png" class="suntime"> icons by Pixel perfect-Flaticon</a>
+      </div>
       </div>
     </div>
     <script src="src/script.js"></script>

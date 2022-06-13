@@ -76,14 +76,14 @@ function displayForecast(dailyForecast) {
 
       forecastHTML =
         forecastHTML +
-        `<div class="col-2 forecast-cell">
+        `<div>
               <div class="weather-forecast-day">${formatForecastDay(
                 forecastDay.dt
               )}</div>
               <img src="images/${forecastIcon}.svg" class="forecast" alt="" />
-              <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-temperature-min">${forecastMin}</span>°
-                <span class="weather-forecast-temperature-max">${forecastMax}</span>°
+              <div class="weather-forecast-temperature small">
+                <span>${forecastMin}</span>°
+                <span>${forecastMax}</span>°
               </div>
             </div>`;
     }
